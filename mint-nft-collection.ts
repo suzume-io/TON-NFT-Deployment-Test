@@ -45,16 +45,17 @@ async function init() {
   };
 
   // upload nft content, same for all nfts in the collection
-  const commonContent = await sdk.storage.uploadFile(
-    Buffer.from(JSON.stringify(content), "utf-8")
-  );
+  // NOTE: If commonContent is set with a non-empty value, the NFT items can't have their individual contents
+  // const commonContent = await sdk.storage.uploadFile(
+  //   Buffer.from(JSON.stringify(content), "utf-8")
+  // );
 
   // NFT metadata explanation:
   // https://docs.ton.org/develop/dapps/tutorials/collection-minting#references
   const collection = await sdk.deployNftCollection(
     {
       collectionContent: content,
-      commonContent: commonContent,
+      commonContent: ""
     },
     {
       adminAddress: adminAddress,

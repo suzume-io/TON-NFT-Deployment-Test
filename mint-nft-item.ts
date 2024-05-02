@@ -12,11 +12,9 @@ import { Address } from "@ton/core";
 dotenv.config();
 const NETWORK = "testnet";
 // For now, the address needs to be manually found through transactions on tonscan, but it can be easily recorded as well
-const COLLECTION = "EQAuwZQwkCbP2NHpoyAUdD608oQ_N8OZiRCb9W6R80KT0wEZ";
-const IMAGE_FOLDER_PATH = "content-template";
-const IMAGE_FILE_PATH = `image.png`;
-// const IMAGE_FOLDER_PATH = "./data/images";
-// const IMAGE_FILE_PATH = `${Math.round(Math.random() * 100) % 5}.jpg`;
+const COLLECTION = "kQAwU1ygX5b_70Q1AykJMN9wjfd0r-aI9cKR6YTGlx9IGKiM";
+const IMAGE_FOLDER_PATH = "./data/images";
+const IMAGE_FILE_PATH = `${Math.round(Math.random() * 100) % 5}.jpg`;
 
 async function init() {
   const api = await createApi(NETWORK);
