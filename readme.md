@@ -1,5 +1,6 @@
 # Suzume TON Deployment Test
 - This repo serves as a test of token deployment on TON, in preparation of launching the NFTs in the Suzume ecosystem
+- Suzume only supports standard NFT for now, therefore we are leveraging the [@ton-community/assets-sdk](https://github.com/ton-community/assets-sdk) for the smart contracts.
 
 ## Mint NFT
 - Install dependencies `yarn`
